@@ -1,8 +1,9 @@
 (function() {
+  var server="http://localhost/keksogram/113746-keksogram/";
   var images = [
-    'img/logo-background-1.jpg',
-    'img/logo-background-2.jpg',
-    'img/logo-background-3.jpg'
+    server+'img/logo-background-1.jpg',
+    server+'img/logo-background-2.jpg',
+    server+'img/logo-background-3.jpg'
   ];
 
   var backgroundElement = document.querySelector('.upload');
