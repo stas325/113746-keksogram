@@ -125,7 +125,9 @@ body {
 .upload-file {
   display: block;
 }
-
+.picture-load-failure{
+  background-image: url('img/logo-background-3.jpg');
+}
 .upload-submit {
   display: none;
 }
@@ -251,6 +253,9 @@ input[type=radio]:checked + .upload-filter-label {
 
 .picture img {
   border: 0;
+}
+.hidden{
+  visibility: hidden;
 }
 
 .picture:nth-of-type(2n-1):nth-of-type(-n+6) {

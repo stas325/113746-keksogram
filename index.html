@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
   <title>Keksogram</title>
 </head>
 <body>
@@ -60,31 +63,30 @@
   </form>
 </div>
 
-<div class="pictures">
-  <a href="#" class="picture"><img src="photos/1.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/2.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/3.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/4.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/5.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/6.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/7.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/8.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/9.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/10.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/11.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/12.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/13.jpg" width="182" height="182"></a>
-  <a href="#" class="picture"><img src="photos/14.jpg" width="182" height="182"></a>
-</div>
+<div class="pictures"></div>
 
- <script src="js/logo-background.js" charset="utf-8"></script>
+<template id="picture-template">
+  <a href="" class="picture">
+    <img src="" width="182" height="182">
+    <span class="picture-stats">
+      <span class="picture-stat picture-comments"></span>
+      <span class="picture-stat picture-likes"></span>
+    </span>
+  </a>
+</template>
+
+<script src="js/logo-background.js" charset="utf-8"></script>
 <script src="js/resize-form.js" charset="utf-8"></script>
 <script src="js/upload-form.js" charset="utf-8"></script>
-
 <script src="js/filter-form.js" charset="utf-8"></script>
-<!--<script src="js/cookie-life.js" charset="utf-8"></script>-->
-<script src="js/form-2.js"></script>
-<script src="js/form-3.js"></script>
+<script src="js/form-2.js" charset="utf-8"></script>
+<script src="js/form-3.js" charset="utf-8"></script>
+<script src="data/pictures.js"></script>
+<script src="js/pictures.js"></script>
+
+
+
+
 
 </body>
 </html>
