@@ -79,27 +79,26 @@ function setCookie(name, value, options) { // работаем с куки
     document.cookie = updatedCookie;
 }
 
-none.onchange = function(evt) { // если изменился none - записываем cookie
-    evt.preventDefault();
+none.onclick = function(evt) { // если изменился none - записываем cookie
+
 
    setCookie('cookie_filter', 'none', expire)
 
 }
 
-chrome.onchange = function(evt) {
-    evt.preventDefault();
+chrome.onclick = function(evt) {
+
 
     setCookie('cookie_filter', 'chrome', expire)
 
 }
 
-sepia.onchange = function(evt) {
-    evt.preventDefault();
+sepia.onclick = function(evt) {
+
 
     setCookie('cookie_filter', 'sepia', expire)
 
 }
-
 
 
 

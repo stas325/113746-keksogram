@@ -22,8 +22,8 @@ console.log('1246666');
       var newPictureElement = pictureTemplate.content.children[0].cloneNode(true);
 
 
-      newPictureElement.querySelector('.picture-likes').textContent = pictures['likes']; // считываем лайки
-      newPictureElement.querySelector('.picture-comments').textContent = pictures['comments']; // считываем коменты
+      newPictureElement.querySelector('.picture-likes').textContent = picture['likes']; // считываем лайки
+      newPictureElement.querySelector('.picture-comments').textContent = picture['comments']; // считываем коменты
 
       var pictureBackground = new Image(); // работаем с изображением
       pictureBackground.src = picture['url'];
@@ -35,14 +35,14 @@ console.log('1246666');
 
       pictureBackground.onload = function() {// ѕри нормальной загрузки изображени€
 
-         var imgOLD = document.getElementsByTagName('img')[i+2];
-          var imgNEW = document.createElement('img');
-          imgNEW.setAttribute("src", pictureBackground.src);
-          imgNEW.setAttribute('width', '182');
-          imgNEW.setAttribute('height', '182');
+         var imgOLD = newPictureElement.querySelector('img');
+
+
+        pictureBackground.setAttribute('width', '182');
+        pictureBackground.setAttribute('height', '182');
 
           var parentOLD = imgOLD.parentNode;
-          parentOLD.replaceChild(imgNEW, imgOLD);
+          parentOLD.replaceChild(pictureBackground, imgOLD);
 
           clearTimeout(imageLoadTimeout);
 
