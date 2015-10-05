@@ -1,9 +1,7 @@
-
 (function() {
   var uploadForm = document.forms['upload-select-image'];
   var resizeForm = document.forms['upload-resize'];
   var filterForm = document.forms['upload-filter'];
-
 
   var fileElement = uploadForm['upload-file'];
 
@@ -23,16 +21,8 @@
     }
   };
 
-
   uploadForm.onsubmit = function(evt) {
     evt.preventDefault();
-    var resizeForm = document.forms['upload-resize'];
-
-
-
-
-
-
 
     uploadImage(fileElement, function(image) {
       sessionStorage.setItem('uploaded-image', image);
